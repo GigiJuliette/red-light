@@ -1,71 +1,114 @@
-.container {
-  margin: 2.5rem 0;
-  height: 1200px;
-  position: relative;
+.grid-container {
+  display: grid;
+  margin: 0;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(6, 300px 600px);
 
-  &__img {
-    width: 40%; //
-    aspect-ratio: 1/1.5;
-    // background-image: url(../img/image3.jpg);
-    background-size: cover;
-    animation: img-scroll both linear;
-    animation-timeline: view();
+  & .container {
+    &__img {
+      background-size: cover;
+      transform-origin: left;
+      animation: img-scroll both linear;
+      animation-timeline: view();
+      transform-origin: left;
+    }
+
+    &__text {
+      animation: text-scroll both linear;
+      animation-timeline: view();
+      text-align: right;
+      display: flex;
+      flex-direction: row-reverse;
+      transform-origin: right;
+
+      & p {
+        max-width: 80%;
+      }
+    }
   }
 
-  &__text {
-    top: 0;
-    left: 20%;
-    position: absolute;
-    text-align: right;
-    max-width: 80%;
-    animation: text-scroll both linear;
-    animation-timeline: view();
+  & .containerb {
+    &__img {
+      background-size: cover;
+      animation: img-scroll both linear;
+      animation-timeline: view();
+      transform-origin: right;
+    }
+
+    &__text {
+      animation: text-scroll both linear;
+      animation-timeline: view();
+      transform-origin: left;
+
+      & p {
+        max-width: 80%;
+      }
+    }
   }
 }
 
-.containerb {
-  margin: 2.5rem 0;
-  height: 1200px;
-  position: relative;
+// grid placement
 
-  &__img {
-    position: absolute;
-    // left: calc(100% - 800px);
-    left: 60%;
-    width: 40%;
-    aspect-ratio: 1/1.5;
-    // background-image: url(../img/image2.jpg);
-    background-size: cover;
-    animation: img-scroll both linear;
-    animation-timeline: view();
+.img {
+  &__1 {
+    background-image: url(../img/image2.jpg);
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
   }
 
-  &__text {
-    left: 0;
-    position: absolute;
-    text-align: left;
-    max-width: 80%;
-    animation: text-scroll both linear;
-    animation-timeline: view();
+  &__2 {
+    background-image: url(../img/image3.jpg);
+    grid-row: 3 / 6;
+    grid-column: 3 / 4;
   }
 
+  &__3 {
+    background-image: url(../img/image4.jpg);
+    grid-row: 5 / 8;
+    grid-column: 1 / 2
+  }
+
+  &__4 {
+    background-image: url(../img/image5.jpg);
+    grid-row: 7 / 10;
+    grid-column: 3 / 4;
+  }
+
+  &__5 {
+    background-image: url(../img/image2.jpg);
+    grid-row: 9 / 12;
+    grid-column: 1 / 2;
+  }
 }
 
-.pic1{
-  background-image: url(../img/image2.jpg);
-}
-.pic2{
-  background-image: url(../img/image3.jpg);
-}
-.pic3{
-  background-image: url(../img/image4.jpg);
-}
-.pic4{
-  background-image: url(../img/image5.jpg);
-}
-.pic4{
-  background-image: url(../img/image6.jpg);
-}
-.pic5{
-  background-image: url(../img/image2.jpg);
+.text {
+  &__1 {
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    align-self: center;
+  }
+
+  &__2 {
+    grid-row: 3 / 6;
+    grid-column: 1 / 4;
+    align-self: center;
+  }
+
+  &__3 {
+    grid-row: 5 / 8;
+    grid-column: 1 / 4;
+    align-self: center;
+  }
+
+  &__4 {
+    grid-row: 7 / 10;
+    grid-column: 1 / 4;
+    align-self: center;
+  }
+
+  &__5 {
+    grid-row: 9 / 12;
+    grid-column: 1 / 4;
+    align-self: center;
+  }
 }
