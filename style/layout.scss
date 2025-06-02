@@ -1,0 +1,71 @@
+.container {
+  margin: 2.5rem 0;
+  height: 1200px;
+  position: relative;
+
+  &__img {
+    width: 40%; //
+    aspect-ratio: 1/1.5;
+    // background-image: url(../img/image3.jpg);
+    background-size: cover;
+    animation: img-scroll both linear;
+    animation-timeline: view();
+  }
+
+  &__text {
+    top: 0;
+    left: 20%;
+    position: absolute;
+    text-align: right;
+    max-width: 80%;
+    animation: text-scroll both linear;
+    animation-timeline: view();
+  }
+}
+
+.containerb {
+  margin: 2.5rem 0;
+  height: 1200px;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    // left: calc(100% - 800px);
+    left: 60%;
+    width: 40%;
+    aspect-ratio: 1/1.5;
+    // background-image: url(../img/image2.jpg);
+    background-size: cover;
+    animation: img-scroll both linear;
+    animation-timeline: view();
+  }
+
+  &__text {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    max-width: 80%;
+    animation: text-scroll both linear;
+    animation-timeline: view();
+  }
+
+}
+
+.pic1{
+  background-image: url(../img/image2.jpg);
+}
+.pic2{
+  background-image: url(../img/image3.jpg);
+}
+.pic3{
+  background-image: url(../img/image4.jpg);
+}
+.pic4{
+  background-image: url(../img/image5.jpg);
+}
+.pic4{
+  background-image: url(../img/image6.jpg);
+}
+.pic5{
+  background-image: url(../img/image2.jpg);
+}

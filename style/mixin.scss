@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+@mixin title{
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: white;
+}
+@mixin text{
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size:60px;
+}
+
+@mixin glass{
+ background: #110000;
+ border:1px solid rgba(255, 255, 255, 0.082);
+}

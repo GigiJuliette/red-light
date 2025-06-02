@@ -1,0 +1,126 @@
+.header-bar {
+  height: 30vh;
+  background: #110000;
+  border: 1px solid rgba(255, 255, 255, 0.082);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes text-scroll {
+  from {
+    top: 50%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes img-scroll {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.container {
+  margin: 2.5rem 0;
+  height: 1200px;
+  position: relative;
+}
+.container__img {
+  width: 40%;
+  aspect-ratio: 1/1.5;
+  background-size: cover;
+  animation: img-scroll both linear;
+  animation-timeline: view();
+}
+.container__text {
+  top: 0;
+  left: 20%;
+  position: absolute;
+  text-align: right;
+  max-width: 80%;
+  animation: text-scroll both linear;
+  animation-timeline: view();
+}
+
+.containerb {
+  margin: 2.5rem 0;
+  height: 1200px;
+  position: relative;
+}
+.containerb__img {
+  position: absolute;
+  left: 60%;
+  width: 40%;
+  aspect-ratio: 1/1.5;
+  background-size: cover;
+  animation: img-scroll both linear;
+  animation-timeline: view();
+}
+.containerb__text {
+  left: 0;
+  position: absolute;
+  text-align: left;
+  max-width: 80%;
+  animation: text-scroll both linear;
+  animation-timeline: view();
+}
+
+.pic1 {
+  background-image: url(../img/image2.jpg);
+}
+
+.pic2 {
+  background-image: url(../img/image3.jpg);
+}
+
+.pic3 {
+  background-image: url(../img/image4.jpg);
+}
+
+.pic4 {
+  background-image: url(../img/image5.jpg);
+}
+
+.pic4 {
+  background-image: url(../img/image6.jpg);
+}
+
+.pic5 {
+  background-image: url(../img/image2.jpg);
+}
+
+body {
+  background: radial-gradient(27% 29% at right, rgba(0, 0, 0, 0) 83%, #200101 85% 99%, rgba(0, 0, 0, 0) 101%) 13px 26px, radial-gradient(27% 29% at left, rgba(0, 0, 0, 0) 83%, #200101 85% 99%, rgba(0, 0, 0, 0) 101%) -13px 26px, radial-gradient(29% 27% at top, rgba(0, 0, 0, 0) 83%, #200101 85% 99%, rgba(0, 0, 0, 0) 101%) 0 13px, radial-gradient(29% 27% at bottom, rgba(0, 0, 0, 0) 83%, #200101 85% 99%, rgba(0, 0, 0, 0) 101%) 0 -13px #000000;
+  background-size: 52px 52px;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: white;
+  margin: 0;
+}
+
+p {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 60px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

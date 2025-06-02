@@ -1,0 +1,11 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+.header-bar{
+  height:30vh;
+  @include glass;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}

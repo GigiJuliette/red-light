@@ -1,0 +1,26 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+@keyframes text-scroll{
+  from{
+    top:50%;
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  to{
+    top:0;
+  }
+}
+
+@keyframes img-scroll{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  30%{
+    opacity:1;
+    transform:scale(1);
+  }
+}

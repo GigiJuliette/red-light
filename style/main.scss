@@ -1,0 +1,28 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+@import "./header.scss";
+@import "./keyframes.scss";
+@import "./layout.scss";
+
+
+body {
+ background:
+      radial-gradient(27% 29% at right, #0000 83%,#200101 85% 99%,#0000 101%) calc(26px/2) 26px,
+      radial-gradient(27% 29% at left, #0000 83%,#200101 85% 99%,#0000 101%) calc(26px/-2) 26px,
+      radial-gradient(29% 27% at top, #0000 83%,#200101 85% 99%,#0000 101%) 0 calc(26px/2),
+      radial-gradient(29% 27% at bottom, #0000 83%,#200101 85% 99%,#0000 101%) 0 calc(26px/-2)
+      #000000;
+background-size: 52px 52px;
+
+
+    margin:0;
+}
+
+h1{
+  @include title;
+  margin:0;
+}
+p{
+  @include text;
+  margin:0;
+}
