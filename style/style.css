@@ -5,7 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  transform-origin: center;
+  animation: header-bar both linear;
+  animation-timeline: view();
 }
 
 @keyframes img-scroll {
@@ -35,6 +37,30 @@
   }
   to {
     transform: translateY(-200%);
+  }
+}
+@keyframes header-bar {
+  80% {
+    height: 30vh;
+  }
+  to {
+    height: 20vh;
+  }
+}
+@keyframes header-title {
+  80% {
+    font-size: 100px;
+  }
+  to {
+    font-size: 70px;
+  }
+}
+@keyframes icon-scroll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(380deg);
   }
 }
 .grid-container {
@@ -142,6 +168,8 @@ h1 {
   font-size: 100px;
   color: white;
   margin: 0;
+  animation: header-title both linear;
+  animation-timeline: view();
 }
 
 p {
@@ -151,6 +179,26 @@ p {
   color: white;
   font-size: 60px;
   margin: 0;
+}
+
+.cat-icon {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  position: sticky;
+  top: 37.5px;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cat-icon img {
+  width: 150px;
+  height: auto;
+  padding-right: 75px;
+  transform-origin: 75px 75px;
+  animation: icon-scroll linear 2;
+  animation-timeline: scroll(root);
 }
 
 /*# sourceMappingURL=style.css.map */

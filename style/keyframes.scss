@@ -36,3 +36,30 @@
     transform: translateY(-200%)
   }
 }
+
+@keyframes header-bar{
+  80%{
+    height:30vh
+  }
+  to{
+    height:20vh
+  }
+}
+
+@keyframes header-title{
+  80%{
+    font-size:100px
+  }
+  to{
+    font-size:70px;
+  }
+}
+
+@keyframes icon-scroll {
+  from {
+    transform: rotate(0deg); // droit au centre
+  }
+  to {
+    transform: rotate(380deg); // tourne au scroll
+  }
+}

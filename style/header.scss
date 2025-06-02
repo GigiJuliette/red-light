@@ -7,5 +7,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  flex-direction: column;
+  transform-origin: center;
+  animation: header-bar both linear;
+  animation-timeline: view();
 }
